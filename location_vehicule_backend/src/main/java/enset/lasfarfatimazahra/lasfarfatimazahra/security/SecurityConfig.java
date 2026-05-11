@@ -8,8 +8,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Bean
-    SecurityFilterChain securityFilterChain(
-            HttpSecurity http)
+    SecurityFilterChain securityFilterChain(HttpSecurity http)
             throws Exception {
 
         http
@@ -18,7 +17,8 @@ public class SecurityConfig {
                         auth
                                 .requestMatchers(
                                         "/auth/**",
-                                        "/swagger-ui/**"
+                                        "/swagger-ui/**",
+                                        "/v3/api-docs/**"
                                 ).permitAll()
                                 .anyRequest()
                                 .authenticated()
