@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Moto {
+public class Moto extends Vehicule{
     private int cylindree;
 
     @Enumerated(EnumType.STRING)
